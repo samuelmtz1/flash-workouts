@@ -5,6 +5,11 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    # Expo fija versiones compatibles por SDK (TypeScript, ESLint, React Native).
+    # Los saltos mayores se hacen al actualizar el SDK con `npx expo install --fix`.
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
     groups:
       expo:
         patterns: ['expo*', '@expo/*', 'react-native*', 'react', 'react-dom']

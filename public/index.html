@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Flash Workouts</title>
+    <meta name="description" content="Tu rutina de gimnasio, clara: qué toca hoy, cómo se hace cada ejercicio y cuánto llevas." />
+    <meta name="theme-color" content="#F5F1E8" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Flash" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <script src="/register-sw.js" defer></script>
+    <!-- Reset recomendado por react-native-web. El fondo sigue al tema del sistema antes de que cargue la app. -->
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+        background-color: #f5f1e8;
+      }
+      @media (prefers-color-scheme: dark) {
+        html,
+        body {
+          background-color: #111111;
+        }
+      }
+      body {
+        overflow: hidden;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+      [role='button'],
+      [role='radio'],
+      a[href] {
+        cursor: pointer;
+      }
+      :focus-visible:not(input):not(textarea) {
+        outline: 2px solid var(--focus-ring, #171717) !important;
+        outline-offset: 2px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>Flash Workouts necesita JavaScript activado.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+#!/bin/sh
+# Bloquea el commit si un archivo preparado contiene una llave, token o contraseña,
+# o si se intenta subir un PDF (las rutinas reales nunca entran al repositorio).
+export PATH="$HOME/.local/node/bin:$PATH"
+
+staged=$(git diff --cached --name-only --diff-filter=ACM)
+[ -z "$staged" ] && exit 0
+
+if echo "$staged" | grep -qiE '\.pdf$|^docs/source/|(^|/)\.env'; then
+  echo "pre-commit: no se permiten PDFs, docs/source/ ni archivos .env en el repositorio." >&2
+  exit 1
+fi
+
+echo "$staged" | tr '\n' '\0' | xargs -0 npx --no-install secretlint --maskSecrets || {
+  echo "pre-commit: secretlint encontró un posible secreto. Quítalo antes de hacer commit." >&2
+  exit 1
+}

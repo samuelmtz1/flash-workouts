@@ -5,6 +5,8 @@ Una app web para seguir tu rutina de gimnasio: qué toca hoy, cómo se hace cada
 - Sin cuentas ni servidores: tus datos y fotos se quedan en tu dispositivo.
 - Gratis, sin anuncios ni analítica.
 
+App: https://flash-workouts.samymartinez01.workers.dev
+
 Estado: v0.1 (base). La importación de rutinas llega en v0.2.
 
 ## Desarrollo

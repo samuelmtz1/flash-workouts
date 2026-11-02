@@ -5,6 +5,9 @@ Contexto para cualquier sesión nueva de Claude en este repo. Léelo completo an
 ## Qué es
 PWA para seguir rutinas de gimnasio. Lee una rutina (PDF o texto, sin formato estándar) y muestra qué toca hoy, la ficha de cada ejercicio (mapa muscular, indicaciones y video), un contador por serie con temporizador, un calendario mensual con una foto por día, y métricas y objetivos. La usan Samuel y otras personas, cada quien en su teléfono.
 
+- App: https://flash-workouts.samymartinez01.workers.dev
+- Repo: https://github.com/samuelmtz1/flash-workouts
+
 Plan completo y decisiones: `/Users/samuel/.claude/plans/tengo-un-proyecto-de-merry-meadow.md`.
 
 ## Reglas no negociables
@@ -49,7 +52,7 @@ npx wrangler dev --local-protocol https   # sirve dist/ con los headers reales d
 ## Roadmap
 | Versión | Contenido | Estado |
 |---|---|---|
-| v0.1 | Base: tokens, fuentes, tema, 5 secciones con barra lateral en escritorio, onboarding, PWA, headers, CI, docs | Construida |
+| v0.1 | Base: tokens, fuentes, tema, 5 secciones con barra lateral en escritorio, onboarding, PWA, headers, CI, docs | Publicada (2026-11-02), falta revisión de Samuel en el teléfono |
 | v0.2 | Modelo de datos, IndexedDB, importación PDF/texto, lector con tests, editor, formato Flash, biblioteca de ~100 ejercicios, mapa muscular, fichas, videos, links de rutina | |
 | v0.3 | Pantalla Hoy, modo entreno (contador de series, temporizador por ejercicio, peso opcional, la vez pasada), check-in | |
 | v0.4 | Calendario mensual con fotos (sin EXIF), detalle del día, collage | |

@@ -1,4 +1,4 @@
-# Headers de seguridad para Cloudflare Pages. Ver docs/SECURITY.md.
+# Headers de seguridad para Cloudflare Workers (archivos estáticos). Ver docs/SECURITY.md.
 # style-src necesita 'unsafe-inline' porque react-native-web inyecta <style> en tiempo de ejecución.
 # Los scripts no tienen 'unsafe-inline' ni 'unsafe-eval'.
 /*

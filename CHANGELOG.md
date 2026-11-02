@@ -11,4 +11,4 @@ Base del proyecto.
 - Onboarding con nombre obligatorio y estatura, peso, nivel y unidades opcionales.
 - Perfil: cambiar nombre, tema y unidades, y borrar los datos del dispositivo.
 - PWA: manifest, service worker con Workbox y un icono provisional.
-- Seguridad: headers con CSP estricta para Cloudflare Pages, secretlint en pre-commit, gitleaks, CodeQL y Dependabot en GitHub.
+- Seguridad: headers con CSP estricta para Cloudflare Workers, secretlint en pre-commit, gitleaks, CodeQL y Dependabot en GitHub.

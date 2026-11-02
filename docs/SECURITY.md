@@ -18,7 +18,7 @@ Este documento se revisa al cerrar cada versión, junto con `/security-review`.
 | Imports (PDF, texto, respaldos, links) | Archivos maliciosos | Validación con zod, límites de tamaño y pdf.js con `isEvalSupported: false` (v0.2) |
 | Dependencias | Paquete vulnerable o comprometido | Lockfile, `npm audit` en CI, Dependabot, CodeQL y pocas dependencias |
 
-## Headers (`public/_headers`, Cloudflare Pages)
+## Headers (`public/_headers`, Cloudflare Workers)
 
 - `Content-Security-Policy`: `default-src 'self'`, `script-src 'self'`, `style-src 'self' 'unsafe-inline'`, `img-src 'self' blob: data:`, `font-src 'self'`, `connect-src 'self'`, `worker-src 'self'`, `frame-src 'none'`, `object-src 'none'`, `base-uri 'none'`, `form-action 'none'`, `frame-ancestors 'none'`, `upgrade-insecure-requests`.
 - `Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: no-referrer`, `Permissions-Policy` (cámara solo en el propio sitio; micrófono, ubicación y pagos desactivados), `Cross-Origin-Opener-Policy: same-origin`.

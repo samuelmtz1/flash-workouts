@@ -1,0 +1,11 @@
+// Cloudflare Workers (solo archivos estáticos): sirve dist/ como SPA.
+// Los headers de seguridad vienen de public/_headers, que Expo copia a dist/.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "flash-workouts",
+  "compatibility_date": "2026-11-02",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}

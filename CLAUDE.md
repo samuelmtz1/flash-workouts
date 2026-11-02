@@ -22,7 +22,7 @@ Plan completo y decisiones: `/Users/samuel/.claude/plans/tengo-un-proyecto-de-me
 - Antes de mover algo grande, pregunta. Cada versión cierra con una revisión de Samuel en su teléfono.
 
 ## Stack
-Expo SDK 58 (web, `web.output: "single"`), Expo Router con pestañas sin estilo propio (`expo-router/ui`), TypeScript strict, react-native-web, react-native-svg, zustand, Jest (`jest-expo/web`). Workbox genera el service worker. Hosting en Cloudflare Pages (`public/_headers`).
+Expo SDK 58 (web, `web.output: "single"`), Expo Router con pestañas sin estilo propio (`expo-router/ui`), TypeScript strict, react-native-web, react-native-svg, zustand, Jest (`jest-expo/web`). Workbox genera el service worker. Hosting en Cloudflare Workers con archivos estáticos (`wrangler.jsonc`, headers en `public/_headers`). Cada push a `main` despliega solo.
 
 ```bash
 export PATH="$HOME/.local/node/bin:$PATH"   # Node no está en el PATH por defecto
@@ -30,6 +30,7 @@ npm run web          # desarrollo
 npm run check        # tipos + lint + tests + secretos
 npm run build:web    # dist/ con service worker
 npm run audit        # vulnerabilidades altas en dependencias de producción
+npx wrangler dev --local-protocol https   # sirve dist/ con los headers reales de Cloudflare
 ```
 
 ## Estructura
@@ -56,7 +57,6 @@ npm run audit        # vulnerabilidades altas en dependencias de producción
 | v1.0 | Respaldo `.flash`, accesibilidad, auditoría completa, pulido | |
 
 ## Pendientes de Samuel
-- Crear el repositorio público `samuelmtz1/flash-workouts` en GitHub y conectar Cloudflare Pages.
 - Confirmar mayúsculas o sentence case en botones (hoy: sentence case).
 - Logo propio (opcional; hoy hay un icono "FW" provisional).
 - Aprobar la lista de canales de YouTube (v0.2).

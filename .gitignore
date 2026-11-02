@@ -45,3 +45,7 @@ yarn-error.*
 docs/source/
 .env*
 coverage/
+
+# Cloudflare
+.wrangler/
+.dev.vars*

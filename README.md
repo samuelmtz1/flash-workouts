@@ -19,11 +19,13 @@ npm run check                         # tipos, lint, tests y secretos
 npm run build:web                     # build estático en dist/ con service worker
 ```
 
-## Publicación (Cloudflare Pages)
+## Publicación (Cloudflare Workers)
 
-- Comando de build: `npm run build:web`
-- Directorio de salida: `dist`
-- Variable de entorno: `NODE_VERSION=22`
+Se despliega solo con cada push a `main` (Workers Builds conectado a GitHub).
+
+- Build command: `npm run build:web`
+- Deploy command: `npx wrangler deploy`
+- La configuración está en `wrangler.jsonc` (sirve `dist/` como SPA) y la versión de Node en `.node-version`.
 
 Los headers de seguridad están en `public/_headers`. Ver `docs/SECURITY.md`.
 

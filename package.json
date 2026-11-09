@@ -34,7 +34,7 @@
     "secretlint": "^13.1.0",
     "typescript": "~6.0.3",
     "workbox-cli": "^7.4.1",
-    "wrangler": "^4.156.1"
+    "wrangler": "^4.158.0"
   },
   "scripts": {
     "start": "expo start",

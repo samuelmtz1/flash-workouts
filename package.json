@@ -30,7 +30,7 @@
     "eslint-config-expo": "^58.0.4",
     "jest": "~30.5.2",
     "jest-expo": "~58.0.13",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.1",
     "secretlint": "^13.1.0",
     "typescript": "~6.0.3",
     "workbox-cli": "^7.4.1",
